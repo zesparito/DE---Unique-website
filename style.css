@@ -1,0 +1,229 @@
+:root {
+  --primary: #003366; /* Replace this with your logo’s main color */
+  --accent: #e60000;  /* Bright red */
+  --light: #f9f9f9;
+  --dark: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* === HEADER === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: var(--primary);
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 60px;
+}
+
+.nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* === HERO SECTION === */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: white;
+  color: var(--primary);
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* === SERVICES SECTION === */
+.services {
+  padding: 60px 20px;
+  background: var(--light);
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--primary);
+}
+
+/* === SERVICE CAROUSEL === */
+.service-carousel {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px 0;
+  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* === SERVICE CARD === */
+.service-card {
+  min-width: 260px;
+  flex: 0 0 30%; /* 3 visible per row on wide screens */
+  max-width: 340px;
+  height: 260px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+/* === DARK OVERLAY === */
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.service-card h3,
+.service-card p {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+}
+
+/* === HOVER EFFECT === */
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+}
+
+/* === BACKGROUND IMAGES === */
+.nin-service {
+  background-image: url("images/NIN-Registration.jpg");
+}
+
+.passport-service {
+  background-image: url("images/Nigerian-Passport.jpg");
+}
+
+.bvn-service {
+  background-image: url("images/BVN-Enrollment.jpg");
+}
+
+.bank-service {
+  background-image: url("images/Bank-Account.jpg");
+}
+
+.cleaning-service {
+  background-image: url("images/Cleaning.jpg");
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 900px) {
+  .service-card {
+    flex: 0 0 45%;
+    height: 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-card {
+    flex: 0 0 90%;
+    height: 220px;
+  }
+}
+
+/* === CONTACT SECTION === */
+.contact {
+  padding: 60px 20px;
+  background: var(--primary);
+  color: white;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact button {
+  padding: 10px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* === FOOTER === */
+.footer {
+  text-align: center;
+  background: var(--dark);
+  color: white;
+  padding: 15px 10px;
+  font-size: 0.9em;
+}
